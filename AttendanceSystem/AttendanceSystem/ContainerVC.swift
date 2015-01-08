@@ -38,7 +38,7 @@ class ContainerVC: UIViewController, UISplitViewControllerDelegate {
     
     private func configureSplitVC() {
         let splitVC = self.childViewControllers[0] as UISplitViewController
-
+        
         splitVC.delegate = self
         splitVC.preferredDisplayMode = UISplitViewControllerDisplayMode.PrimaryHidden
         splitVC.preferredPrimaryColumnWidthFraction = 0.4

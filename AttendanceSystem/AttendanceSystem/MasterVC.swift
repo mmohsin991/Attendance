@@ -25,6 +25,7 @@ class MasterVC: UITableViewController, UISplitViewControllerDelegate {
         
         self.tableView.separatorInset = UIEdgeInsets(top: 0.0, left: 15.0, bottom: 0.0, right: 15.0)
 
+        self.view.frame.origin = CGPoint(x: 300, y: 200)
                 
         performSegueWithIdentifier("showDetail", sender: 0)
         
@@ -95,8 +96,6 @@ class MasterVC: UITableViewController, UISplitViewControllerDelegate {
                 let vc = (segue.destinationViewController as UINavigationController).topViewController as PreferencesVC
                 
             }
-            
-
         
        }
     }

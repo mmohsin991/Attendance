@@ -9,6 +9,8 @@
 import UIKit
 
 
+var wowref = WowRef()
+
 var loginUser : WowUser?
 
 var backgroundImage : UIImage = UIImage(named: "Background2")! {
