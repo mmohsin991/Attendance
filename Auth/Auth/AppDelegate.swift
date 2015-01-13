@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Mohsin. All rights reserved.
 //
 
-// Mohsin
-
 import UIKit
 import CoreData
 
