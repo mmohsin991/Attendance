@@ -8,8 +8,6 @@
 
 import UIKit
 import XCTest
-import WowAttendance
-
 
 class WowAttendanceTests: XCTestCase {
     
@@ -33,17 +31,6 @@ class WowAttendanceTests: XCTestCase {
         self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
-    }
-    
-    // we can't do much  without a view on our root View Controller
-    func testViewDidLoad()
-    {
-        // we only have access to this if we import our project above
-        let v = ViewController()
-        
-        
-        // assert that the ViewController.view is not nil
-        XCTAssertNotNil(v.view, "View Did Not load")
     }
     
 }

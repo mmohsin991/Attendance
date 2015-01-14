@@ -25,18 +25,6 @@
 		4248B2411A630B220003784E /* AddTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248B2401A630B220003784E /* AddTeamVC.swift */; };
 		4248B2441A6311930003784E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248B2421A6311930003784E /* LoginVC.swift */; };
 		4248B2451A6311930003784E /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248B2431A6311930003784E /* SignupVC.swift */; };
-		42B9B3621A668F9E00A162DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423D62DB1A60718B00D92D1B /* AppDelegate.swift */; };
-		42B9B3631A668FB400A162DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423D62E01A60718B00D92D1B /* ViewController.swift */; };
-		42B9B3641A668FED00A162DA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248B2421A6311930003784E /* LoginVC.swift */; };
-		42B9B3651A66904700A162DA /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248B2431A6311930003784E /* SignupVC.swift */; };
-		42B9B3661A66904A00A162DA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9E6F81A61AF5F00720F9F /* HomeVC.swift */; };
-		42B9B3671A66904E00A162DA /* TeamsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248B23E1A63078E0003784E /* TeamsVC.swift */; };
-		42B9B3681A66905100A162DA /* AddTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248B2401A630B220003784E /* AddTeamVC.swift */; };
-		42B9B3691A66905400A162DA /* PreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248B23C1A62EB6A0003784E /* PreferencesVC.swift */; };
-		42B9B36A1A66905800A162DA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9E6BE1A61661200720F9F /* ContainerViewController.swift */; };
-		42B9B36B1A66905C00A162DA /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9E6BF1A61661200720F9F /* SidePanelViewController.swift */; };
-		42B9B36C1A66905F00A162DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9E6FC1A61B05C00720F9F /* Constants.swift */; };
-		42B9B36D1A66906300A162DA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9E6FE1A61BDD400720F9F /* Model.swift */; };
 		42E9E6C21A61661200720F9F /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9E6BE1A61661200720F9F /* ContainerViewController.swift */; };
 		42E9E6C31A61661200720F9F /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9E6BF1A61661200720F9F /* SidePanelViewController.swift */; };
 		42E9E6F91A61AF5F00720F9F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9E6F81A61AF5F00720F9F /* HomeVC.swift */; };
@@ -324,19 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B9B3691A66905400A162DA /* PreferencesVC.swift in Sources */,
-				42B9B3671A66904E00A162DA /* TeamsVC.swift in Sources */,
-				42B9B36A1A66905800A162DA /* ContainerViewController.swift in Sources */,
-				42B9B3631A668FB400A162DA /* ViewController.swift in Sources */,
-				42B9B3651A66904700A162DA /* SignupVC.swift in Sources */,
-				42B9B3681A66905100A162DA /* AddTeamVC.swift in Sources */,
-				42B9B36D1A66906300A162DA /* Model.swift in Sources */,
-				42B9B3621A668F9E00A162DA /* AppDelegate.swift in Sources */,
-				42B9B3661A66904A00A162DA /* HomeVC.swift in Sources */,
-				42B9B3641A668FED00A162DA /* LoginVC.swift in Sources */,
-				42B9B36B1A66905C00A162DA /* SidePanelViewController.swift in Sources */,
 				423D62F51A60718B00D92D1B /* WowAttendanceTests.swift in Sources */,
-				42B9B36C1A66905F00A162DA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
