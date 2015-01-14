@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 PanaCloud. All rights reserved.
 //
 
-// Mohsin
-
 import UIKit
 
 class LoginVC: UIViewController {
@@ -42,30 +40,30 @@ class LoginVC: UIViewController {
         var team = Team(ref: "", orgID: "mohsinTeam", desc: "mohsin is the owner", title: "mohsin tem org", owner: "mmohsin")
         var team1 = Team(ref: "", orgID: "mohsinTeam1", desc: "omdsoam omdsa", title: "dsafa fdsa", owner: "mmohsin", members:  ["shezi" : 1, "mmohsin" : 1])
         
-        wowref.asyncCreateOrganization(team1, callBack: { (errorDesc, unRegMembersUIDs) -> Void in
-            if errorDesc == nil {
-                println("org crated")
-                println(unRegMembersUIDs)
-            }
-            
-            else{
-                println(errorDesc)
-            }
-        })
+//        wowref.asyncCreateOrganization(team1, callBack: { (errorDesc, unRegMembersUIDs) -> Void in
+//            if errorDesc == nil {
+//                println("org crated")
+//                println(unRegMembersUIDs)
+//            }
+//            
+//            else{
+//                println(errorDesc)
+//            }
+//        })
+//        
+//        wowref.asynUserIsExist("mmohsin", callBack: { (isExist) -> Void in
+//            if isExist {
+//                println("user exist")
+//            }
+//            else{
+//                println("user not exist")
+//            }
+//        })
         
-        wowref.asynUserIsExist("mmohsin", callBack: { (isExist) -> Void in
-            if isExist {
-                println("user exist")
-            }
-            else{
-                println("user not exist")
-            }
-        })
         
-        
-//        wowref.asyncLoginUser("", password: "") { (error) -> Void in
+//        wowref.asyncLoginUser("ziaukhan@hotmail.com", password: "123") { (error) -> Void in
 //            if error != nil {
-//                println(error)
+//            //    println(error)
 //            }
 //            else{
 //                println("login successfuly")
@@ -77,6 +75,8 @@ class LoginVC: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         self.imgBackground.image = backgroundImage
+        self.lblErrorMsg.text = ""
+        self.watingIndicator.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -118,7 +118,7 @@ class LoginVC: UIViewController {
     @IBAction func signIn(sender: UIButton) {
         
         
-        if self.txtEmail.text == "" && self.txtPassword.text == "" || self.isWating {
+        if (self.txtEmail.text == "" || self.txtPassword.text == "") || (self.isWating) {
             if self.isWating{
                 self.lblErrorMsg.text = "please wait for response..."
             }
@@ -135,13 +135,18 @@ class LoginVC: UIViewController {
             
             wowref.asyncLoginUser(self.txtEmail.text, password: self.txtPassword.text) { (error) -> Void in
                 
-                self.watingIndicator.hidden = true
                 
                 self.isWating = false
                 if error != nil {
                     // There was an error logging in to this account
-                    self.lblErrorMsg.text = error
-                    self.watingIndicator.hidden = true
+                    
+                    // update UI in main thread
+                    dispatch_sync(dispatch_get_main_queue()) {
+                        self.watingIndicator.hidden = true
+                        self.lblErrorMsg.text = error
+                        self.watingIndicator.hidden = true
+                    }
+                    
 
                     
                 } else {
@@ -149,9 +154,11 @@ class LoginVC: UIViewController {
                     var message = "successfuly sign in "
                     
                     loginUser = WowUser(userName: self.txtEmail.text, email: self.txtEmail.text, firstName: "", lastName: "", teams: nil)
+                 //   self.dismissViewControllerAnimated(true, completion: {
+                        self.performSegueWithIdentifier("homeSeg", sender: self)
                     
-                    self.performSegueWithIdentifier("homeSeg", sender: nil)
-                    
+                 //   })
+
                 }
             }
 
@@ -172,4 +179,7 @@ class LoginVC: UIViewController {
             }, completion: nil)
     }
 
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    }
 }
