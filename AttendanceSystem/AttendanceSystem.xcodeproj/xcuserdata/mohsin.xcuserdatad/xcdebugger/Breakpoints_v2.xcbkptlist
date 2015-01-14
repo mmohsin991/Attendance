@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AttendanceSystem/Model.swift"
-            timestampString = "442411455.903542"
+            timestampString = "442400074.557127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "470"
-            endingLineNumber = "470"
+            startingLineNumber = "457"
+            endingLineNumber = "457"
             landmarkName = "asyncOrgIsExist(_:callBack:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AttendanceSystem/Model.swift"
-            timestampString = "442411455.903542"
+            timestampString = "442400074.557127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "532"
-            endingLineNumber = "532"
+            startingLineNumber = "519"
+            endingLineNumber = "519"
             landmarkName = "asyncCreateOrganization(_:callBack:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AttendanceSystem/Model.swift"
-            timestampString = "442411455.903542"
+            timestampString = "442400074.557127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "528"
-            endingLineNumber = "528"
+            startingLineNumber = "515"
+            endingLineNumber = "515"
             landmarkName = "asyncCreateOrganization(_:callBack:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -148,44 +148,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AttendanceSystem/Model.swift"
-            timestampString = "442411455.903542"
+            timestampString = "442400074.557127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "536"
-            endingLineNumber = "536"
+            startingLineNumber = "523"
+            endingLineNumber = "523"
             landmarkName = "asyncCreateOrganization(_:callBack:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AttendanceSystem/LoginVC.swift"
-            timestampString = "442413063.035835"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "signIn(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AttendanceSystem/PreferencesVC.swift"
-            timestampString = "442595804.292697"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "colorSwitch(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

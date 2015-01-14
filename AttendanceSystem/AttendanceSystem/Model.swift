@@ -378,7 +378,7 @@ class WowRef {
                 
                 let user : [String : String]! = json["user"] as? [String : String]
                 
-//                println(" Status Code: \(statusCode!) \n Status Desc: \(statusDesc!)")
+                println(" Status Code: \(statusCode!) \n Status Desc: \(statusDesc!)")
 //                for (key , value) in user!{
 //                    println("\(key) : \(value)")
 //                    
@@ -386,16 +386,12 @@ class WowRef {
                 
                 if((err) != nil) {
                     
-//                    println(err!.localizedDescription)
+                    println(err!.localizedDescription)
                     callBack(error: err!.localizedDescription)
                     
                 }
-                if user != nil && statusCode == 1 {
+                if user != nil {
                     if user["userID"] != nil && user["token"] != nil {
-                        let userr =  user["userID"]
-                        let token = user["token"]
-                        
-                        println("mohsin: \(userr) \n \(token)")
                         self.asyncLogin(user["userID"]!, token: user["token"]!, callBack: { (errorDesc) -> Void in
                             if errorDesc == nil {
                                 callBack(error: nil)
@@ -406,11 +402,6 @@ class WowRef {
                         })
                     }
                 }
-                
-                // if any error occuerd by our node.js server 
-                else if statusCode != 1 {
-                    callBack(error: statusDesc)
-                }
 
             }
                 
@@ -418,7 +409,6 @@ class WowRef {
             else if response == nil {
                 callBack(error: "respnse is nil")
             }
-
             
         })
         
@@ -428,10 +418,7 @@ class WowRef {
     
     // if successfuly login trn errorDesc will be nil
     func asyncLogin(uID: String, token: String, callBack: (errorDesc : String?) -> Void ){
-        
-        // use wow app refrence here 
-        let sirRef = Firebase(url: "https://luminous-torch-4640.firebaseio.com/")
-        sirRef.authWithCustomToken(token , withCompletionBlock: { error, authData in
+        WowRef.ref.authWithCustomToken(token , withCompletionBlock: { error, authData in
             
             // some error occured
             if error != nil {
