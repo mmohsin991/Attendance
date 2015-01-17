@@ -43,7 +43,7 @@ class SignupVC: UIViewController, UIScrollViewDelegate {
         btnCreate.layer.cornerRadius = 4.0
 
         self.waitingInd.hidden = true
-
+        
         //self.scrollView.bounds.size = self.view.frame.size
 
         self.scrollView.contentSize = self.containerView.frame.size
